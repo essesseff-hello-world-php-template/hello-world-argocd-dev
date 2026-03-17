@@ -335,7 +335,7 @@ echo ""
 echo "✅ Verifying configuration..."
 
 # Check if secrets exist
-if kubectl get secret ghcr-credentials -n {{K8S_NAMESPACE}} &> /dev/null; then
+if kubectl get secret ghcr-credentials -n ${K8S_NAMESPACE} &> /dev/null; then
   echo "  ✓ Secret 'ghcr-credentials' exists"
 else
   echo "  ✗ Secret 'ghcr-credentials' not found"
